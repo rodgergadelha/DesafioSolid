@@ -14,6 +14,7 @@ public class Dragao extends Entidade implements IMovel, IVoador {
 
   public void voar() {
     if(getVida() > 0 && !voando) {
+      voando = true;
       System.out.println("Voando bem alto.");
       setDano((int)(getDano() * 1.5)); 
     }
@@ -21,6 +22,7 @@ public class Dragao extends Entidade implements IMovel, IVoador {
 
   public void pousar() {
     if(getVida() > 0 && voando) {
+      voando = false;
       System.out.println("Pousou.");
       setDano((int)(getDano() / 1.5)); 
     }
